@@ -5,9 +5,11 @@ var startButton = document.getElementById('start');
 var timeRemainingEl = document.getElementById('timeremaining');
 
 
-// var question1 = "Arrays in Javascript can be used to store";
+var questions = {
+    q: "Arrays in JavaScript can be used to store?", a:
+};
 
-//Can I set a variable to save startTime in local storage for final score?
+//Can I set a variable to timerScore function in local storage for final score?
 function timerScore() {
     var startTime = 60;
 
