@@ -1,3 +1,14 @@
+#highscores {
+    float: left;
+    margin-left: 20px;
+}
+
+#timeremaining {
+    float: right;
+    margin-right: 20px;
+    font-weight: bold;
+}
+
 body {
-text-align: center
+text-align: center;
 };
