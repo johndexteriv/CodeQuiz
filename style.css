@@ -3,6 +3,11 @@
     margin-left: 20px;
 }
 
+#home {
+    float: left;
+    margin-left: 20px;
+}
+
 #timeremaining {
     float: right;
     margin-right: 20px;
@@ -11,4 +16,9 @@
 
 body {
 text-align: center;
+};
+
+button {
+clear: both;
+    
 };
