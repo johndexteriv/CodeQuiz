@@ -1,3 +1,7 @@
+document.addEventListener("DOMContentLoaded", function() {
+    
+  
+
 var bodyEl = document.querySelector('body');
 var containerEl = document.getElementsByClassName('container');
 var headerEl = document.querySelector('h1');
@@ -92,8 +96,9 @@ function loadQuestion() {
 // If question count variable exceeds 4, redirect user to high scores page.
     if (count > 4) {
         window.location.href = "highscores.html";
+        console.log('the high scores page loads too fast to even register a console');
         //Assign score to be saved in local storage and called up on high scores page!!
-// Else load next question based on count variable        
+        // Else load next question based on count variable        
     } else {
         // Create new container div and apped to body element
         var newContainer = document.createElement('div');
@@ -183,5 +188,7 @@ buttonEl.addEventListener('click', function beginQuiz(event) {
         loadQuestion(count);
     }
 
+
+});
 
 });
