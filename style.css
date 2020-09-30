@@ -14,11 +14,14 @@
     font-weight: bold;
 }
 
+#highScoreUL {
+    list-style-type: none;
+}
+
 body {
 text-align: center;
 };
 
 button {
 clear: both;
-    
 };

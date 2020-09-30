@@ -8,3 +8,5 @@ Timed code quiz with multiple-choice questions. Features dynamically updated HTM
 4. If a question is answered incorrectly, then time is subtracted from the clock.
 5. When all questions are answered or the timer reaches 0, then the game is over.
 6. When the game ends, the user is prompted with a highscore screen where you can save initials and score.
+
+!['CodeQuiz']()
