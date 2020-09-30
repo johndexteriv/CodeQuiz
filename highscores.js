@@ -7,7 +7,7 @@ var lastScoreEl = document.getElementById('recentScore');
 var submitScoreButton = document.getElementById('highScoreSubmit');
 var highScoreULEl = document.getElementById('highScoreUL');
 var listOfScoresEl = document.getElementById('listOfScores');
-var clearButtonEl = document.getElementById('clear');
+
 
 
 var highScoreList = [
@@ -34,7 +34,6 @@ function renderHighScores () {
 
     highScoreULEl.innerHTML = "";
     listOfScoresEl = highScoreList.length;
-    
 
     for (var i = 0; i < highScoreList.length; i++) { 
     var currentScore = highScoreList[i].s;
@@ -45,7 +44,8 @@ function renderHighScores () {
     li.setAttribute('data-index', i);
     
     highScoreULEl.appendChild(li);
-    }
+}
+
 };
 
 function storeHighScores () {
@@ -69,11 +69,5 @@ submitScoreButton.addEventListener("click", function(event) {
     renderHighScores();
 
     
-
-});
-
-clearButtonEl.addEventListener("click", function(event){
-
-
 
 });

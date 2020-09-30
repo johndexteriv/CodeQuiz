@@ -84,7 +84,7 @@ var questionsAndAnswers = [
         //Answer options with true values assigned to the correct answer and false values assigned to incorrect answers.
         answers: [
             { a: "JavaScript", value: false },
-            { a: "for loopss", value: false },
+            { a: "for loops", value: false },
             { a: "console.log", value: true },
             { a: "Terminal/Bash", value: false },
         ]
@@ -158,7 +158,7 @@ function loadQuestion() {
                 } else {
                     console.log('wrong answer');
                     startTime = startTime - 10;
-                    alert('incorrect, please try again! \\n  points deducted!')
+                    alert('Incorrect, please try again! Points deducted!');
                 
                 }
              
