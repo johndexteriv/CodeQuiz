@@ -7,7 +7,7 @@ var lastScoreEl = document.getElementById('recentScore');
 var submitScoreButton = document.getElementById('highScoreSubmit');
 var highScoreULEl = document.getElementById('highScoreUL');
 var listOfScoresEl = document.getElementById('listOfScores');
-
+var clearButtonEl = document.getElementById('clear');
 
 
 var highScoreList = [
@@ -24,6 +24,8 @@ function showHighScores () {
     if (storedScores !== null){
         highScoreList = storedScores;
     }
+
+
     renderHighScores ();
 }
 
@@ -70,4 +72,15 @@ submitScoreButton.addEventListener("click", function(event) {
 
     
 
+});
+
+clearButtonEl.addEventListener("click", function(event){
+    if (event.target.matches('#clear')){
+    highScoreList.splice(0, highScoreList.length);
+
+    storeHighScores();
+    renderHighScores();
+
+
+    };
 });
