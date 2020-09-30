@@ -6,40 +6,50 @@ var initialText = document.getElementById('initialText');
 var lastScoreEl = document.getElementById('recentScore');
 var submitScoreButton = document.getElementById('highScoreSubmit');
 var highScoreULEl = document.getElementById('highScoreUL');
+var listOfScoresEl = document.getElementById('listOfScores');
+var clearButtonEl = document.getElementById('clear');
 
-
-console.log('Body', bodyEl);
-console.log('home', homeEl);
-console.log('container', containerEl);
-console.log('initials', initialEl);
-console.log('where last score goes', lastScoreEl);
-console.log('this is where you type initials', initialText);
 
 var highScoreList = [
     
 ];
 
+showHighScores ();
 
+function showHighScores () {
 
-var userScoreLocal = localStorage.getItem('userScore');
-console.log(userScoreLocal);
+    var storedScores = JSON.parse (localStorage.getItem('highScoreList'));
+    console.log(storedScores);
+
+    if (storedScores !== null){
+        highScoreList = storedScores;
+    }
+    renderHighScores ();
+}
+
 
 lastScoreEl.textContent = 'Great job, your score is: ' + localStorage.getItem('userScore');
 
 function renderHighScores () {
 
-
     highScoreULEl.innerHTML = "";
+    listOfScoresEl = highScoreList.length;
+    
 
-    for (var i = 0; i < highScoreList.length; i++) {
+    for (var i = 0; i < highScoreList.length; i++) { 
     var currentScore = highScoreList[i].s;
     var currentInitial = highScoreList[i].i;
-    
+
     var li = document.createElement('li');
     li.textContent = currentInitial + " " + currentScore;
+    li.setAttribute('data-index', i);
+    
     highScoreULEl.appendChild(li);
-}
+    }
+};
 
+function storeHighScores () {
+localStorage.setItem('highScoreList', JSON.stringify(highScoreList));
 };
 
 submitScoreButton.addEventListener("click", function(event) {
@@ -51,11 +61,19 @@ submitScoreButton.addEventListener("click", function(event) {
     } 
 
     highScoreList.push({i:userInitials, s:localStorage.getItem('userScore')});
+
     initialText.value = "";
     lastScoreEl.value = "";
 
+    storeHighScores();
     renderHighScores();
 
     
+
+});
+
+clearButtonEl.addEventListener("click", function(event){
+
+
 
 });
