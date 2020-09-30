@@ -19,14 +19,15 @@ showHighScores ();
 function showHighScores () {
 
     var storedScores = JSON.parse (localStorage.getItem('highScoreList'));
-    console.log(storedScores);
+    storedScores.sort(function(a,b){return b-a});
+    console.log('these are the scores', storedScores);
 
     if (storedScores !== null){
         highScoreList = storedScores;
     }
 
-
     renderHighScores ();
+    
 }
 
 
@@ -52,6 +53,7 @@ function renderHighScores () {
 
 function storeHighScores () {
 localStorage.setItem('highScoreList', JSON.stringify(highScoreList));
+
 };
 
 submitScoreButton.addEventListener("click", function(event) {

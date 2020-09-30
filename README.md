@@ -9,4 +9,7 @@ Timed code quiz with multiple-choice questions. Features dynamically updated HTM
 5. When all questions are answered or the timer reaches 0, then the game is over.
 6. When the game ends, the user is prompted with a highscore screen where you can save initials and score.
 
+https://johndexteriv.github.io/CodeQuiz/
 ![CodeQuiz](CodeQuizImg.png)
+
+![HighScores](HighScoresImg.png)
